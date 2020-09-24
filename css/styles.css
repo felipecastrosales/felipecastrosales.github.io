@@ -1,0 +1,131 @@
+:root {
+    --color-background: #21232c; 
+    --color-background-bio: #333333;
+    --color-text: #F0F0F7;   
+    --color-primary: #00dce7;
+    --color-primary-lighter: #22f5ff;
+    --color-primary-dark: #006c71;
+    font-size: 60%; /* controle das medidas rem */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    box-sizing: border-box;        
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: none;
+    color: var(--color-primary);
+}
+
+.highligth {
+    color: var(--color-primary-dark);
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--color-text);
+}
+
+#bio-container {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background: url()var(--color-background-bio);
+    text-align: center;
+    padding: 30px 12px; 
+    border-right: 5px solid var(--color-primary); 
+}
+
+#bio-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+#bio-image {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#bio-container p {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+#bio-container #welcome-text {
+    font-weight: bold;
+}
+
+#about-container {
+    flex: 1 1 80%;
+    height: 100vh;
+    background-color: var(--color-background);
+    padding: 50px;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 25px var(--color-primary);
+}
+
+#social-container li {
+    flex: 1 1 0;
+    max-width: 60px;
+}
+
+#social-container li a {
+    color: var(--color-primary);
+    font-size: 36px;
+}
+
+#email-container {
+    display: flex;
+    justify-content: center;
+}
+
+#email-container ion-icon,
+#email-container a {
+    flex: 1 1 0;
+}
+
+#email-container a {
+    color: var(--color-primary);
+}
+
+#email-container ion-icon {
+    color: var(--color-primary);
+    font-size: 20px;
+    margin-right: 5px;
+    max-width: 20px;
+}
+
+/*about*/
+
+#name {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.description {
+    max-width: 35%;
+    margin-bottom: 10px;
+}
+
