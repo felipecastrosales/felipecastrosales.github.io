@@ -2,16 +2,14 @@
     --color-background: #21232c; 
     --color-background-bio: #333333;
     --color-text: #F0F0F7;   
-    --color-primary: #00dce7;
-    --color-primary-lighter: #22f5ff;
-    --color-primary-dark: #006c71;
+    --color-primary: #5ECBF2;
+    --color-primary-dark: #418BA6;
     font-size: 60%; /* controle das medidas rem */
 }
 
 * {
     margin: 0;
     padding: 0;
-    background-color: var(--color-background);
     box-sizing: border-box;        
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box; 
@@ -24,8 +22,8 @@ h1 {
     color: var(--color-primary);
 }
 
-.highligth {
-    color: var(--color-primary-dark);
+.highlight {
+    color: var(--color-primary);
 }
 
 #container {
@@ -37,10 +35,10 @@ h1 {
 #bio-container {
     flex: 1 1 20%;
     min-height: 100vh;
-    background: url()var(--color-background-bio);
+    background-color: var(--color-background-bio);
     text-align: center;
-    padding: 30px 12px; 
-    border-right: 5px solid var(--color-primary); 
+    padding: 2.2rem 1.4rem; 
+    border-right: 5px solid var(--color-primary);
 }
 
 #bio-container h2 {
@@ -49,15 +47,17 @@ h1 {
 }
 
 #bio-image {
-    width: 175px;
-    height: 175px;
+    width: 24rem;
     border-radius: 50%;
     margin-bottom: 20px;
+    box-shadow: 0px 0px 15px 8px var(--color-background);
+    -webkit-box-shadow: 0px 0px 15px 8px var(--color-background);
+    -moz-box-shadow: 0px 0px 15px 8px var(--color-background);
 }
 
 #bio-container p {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
 }
 
 #bio-container #welcome-text {
@@ -66,16 +66,14 @@ h1 {
 
 #about-container {
     flex: 1 1 80%;
-    height: 100vh;
     background-color: var(--color-background);
-    padding: 50px;
+    padding: 4rem;
 }
 
 #social-container {
     display: flex;
     justify-content: center;
     list-style: none;
-    border-bottom: 25px var(--color-primary);
 }
 
 #social-container li {
@@ -85,12 +83,11 @@ h1 {
 
 #social-container li a {
     color: var(--color-primary);
-    font-size: 36px;
+    font-size: 5rem;
 }
 
 #email-container {
     display: flex;
-    justify-content: center;
 }
 
 #email-container ion-icon,
@@ -100,32 +97,150 @@ h1 {
 
 #email-container a {
     color: var(--color-primary);
+    font-size: 1.8rem;
+    text-decoration: none;
+    max-width: 225px;
 }
 
 #email-container ion-icon {
     color: var(--color-primary);
-    font-size: 20px;
-    margin-right: 5px;
+    font-size: 2rem;
     max-width: 20px;
 }
 
 /*about*/
-
 #name {
-    font-size: 42px;
-    margin-bottom: 15px;
+    font-size: 4rem;
+    margin-bottom: .9rem;
     text-align: center;
 }
 
 #title {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
     font-weight: bold;
     text-align: center;
 }
 
 .description {
-    max-width: 35%;
-    margin-bottom: 10px;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 5rem;
 }
 
+#btn-projects {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--color-text);
+    background-color: var(--color-primary-dark);
+    border: 0.25rem solid var(--color-primary);
+    border-radius: .8rem;
+    text-decoration: none;
+    transition: .3s;
+    margin: 3rem auto;
+    padding: 1rem 1rem;
+    width: 16rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn-projects:hover {
+    background-color: var(--color-primary);
+}
+
+#btn-projects ion-icon {
+    font-size: 20px;
+    max-width: 20px;
+}
+
+#btn-projects ion-icon,
+#btn-projects span {
+    flex: 1 1 0;
+}
+
+#skills-section-title {
+    border-top: 1px solid var(--color-primary);
+    padding: 1.2rem 0;
+    font-size: 32px;
+    text-align: center;
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    text-align: center;
+
+}
+
+.skills-box {
+    flex: 1 1 30%;
+    max-width: 33%;
+    margin-bottom: 35px;
+}
+
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--color-primary);
+}
+
+.skills-box {
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+@media(max-width: 450px) {
+    
+    #container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #bio-container {
+        min-width: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--color-primary);
+    }
+
+    #bio-container h2 {
+        display: none;
+    }
+
+    #bio-container p {
+        max-width: 60%;
+        margin: 10px auto;
+    }
+
+    #about-container {
+        text-align: center;
+        padding: 30px;
+    }
+
+    #about-container .description {
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    #btn-projects {
+        margin: 20px auto;
+    }
+
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+        text-align: left;
+     }
+
+     .skills-box {
+         font-size: 50px;
+     }
+
+}
