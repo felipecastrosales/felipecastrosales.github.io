@@ -1,6 +1,6 @@
 :root {
     --color-background: #21232c; 
-    --color-background-bio: #333333;
+    --color-background-bio: #262626;
     --color-text: #F0F0F7;   
     --color-primary: #5ECBF2;
     --color-primary-dark: #418BA6;
@@ -18,7 +18,6 @@
 
 h1 {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: none;
     color: var(--color-primary);
 }
 
@@ -42,17 +41,14 @@ h1 {
 }
 
 #bio-container h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
+    font-size: 4rem;
 }
 
 #bio-image {
     width: 24rem;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin: 3rem;
     box-shadow: 0px 0px 15px 8px var(--color-background);
-    -webkit-box-shadow: 0px 0px 15px 8px var(--color-background);
-    -moz-box-shadow: 0px 0px 15px 8px var(--color-background);
 }
 
 #bio-container p {
@@ -64,15 +60,10 @@ h1 {
     font-weight: bold;
 }
 
-#about-container {
-    flex: 1 1 80%;
-    background-color: var(--color-background);
-    padding: 4rem;
-}
-
 #social-container {
     display: flex;
-    justify-content: center;
+    margin-top: 6rem;
+    justify-content: space-evenly;
     list-style: none;
 }
 
@@ -109,9 +100,16 @@ h1 {
 }
 
 /*about*/
+
+#about-container {
+    flex: 0 80%;
+    background-color: var(--color-background);
+    padding: 2.8rem 8rem;
+}
+
 #name {
     font-size: 4rem;
-    margin-bottom: .9rem;
+    margin: auto;
     text-align: center;
 }
 
@@ -123,7 +121,7 @@ h1 {
 }
 
 .description {
-    margin-bottom: 1.2rem;
+    margin: 2rem 0;
     font-size: 2rem;
     text-align: center;
     padding: 0 5rem;
@@ -152,7 +150,7 @@ h1 {
 }
 
 #btn-projects ion-icon {
-    font-size: 20px;
+    font-size: 1.6rem;
     max-width: 20px;
 }
 
@@ -161,45 +159,52 @@ h1 {
     flex: 1 1 0;
 }
 
+hr { 
+    display: block;
+    margin: 2rem auto;
+    border: 1rem solid var(--color-primary);
+    border-width: 1px;
+  } 
+
 #skills-section-title {
-    border-top: 1px solid var(--color-primary);
-    padding: 1.2rem 0;
-    font-size: 32px;
+    font-size: 3.8rem;
     text-align: center;
 }
 
 #skills-container {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 25px;
+    margin-top: 2rem;
     text-align: center;
-
+    justify-content: center;
 }
 
 .skills-box {
     flex: 1 1 30%;
-    max-width: 33%;
-    margin-bottom: 35px;
+    max-width: 35%;
 }
 
 .skills-title {
-    font-size: 24px;
-    margin-bottom: 25px;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
     font-weight: bold;
-    padding-left: 10px;
-    border-left: 5px solid var(--color-primary);
+    border-left: .4rem solid var(--color-primary);
 }
 
 .skills-box {
-    font-size: 45px;
-    margin-right: 10px;
+    font-size: 5rem;
 }
 
 @media(max-width: 450px) {
-    
+
     #container {
         flex-direction: column;
+        line-height: 4.2rem;
         justify-content: space-around;
+    }
+
+    #social-container li a {
+        justify-content: space-around;
+        font-size: 5rem;
     }
 
     #bio-container {
@@ -213,34 +218,34 @@ h1 {
     }
 
     #bio-container p {
-        max-width: 60%;
-        margin: 10px auto;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    #name {
+        font-size: 3rem;
+        margin: 2rem auto .5rem;
     }
 
     #about-container {
         text-align: center;
-        padding: 30px;
+        padding: .2rem;
     }
 
     #about-container .description {
-        margin: 10px auto;
+        margin: 2rem auto;
         max-width: 100%;
         line-height: 26px;
     }
 
     #btn-projects {
-        margin: 20px auto;
+        margin: 1rem auto;
     }
 
     .skills-box {
         flex: 1 1 100%;
+        padding: 2rem;
         max-width: 100%;
-        margin-bottom: 30px;
-        text-align: left;
+        text-align: center;
      }
-
-     .skills-box {
-         font-size: 50px;
-     }
-
 }
