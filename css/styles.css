@@ -173,6 +173,7 @@ hr {
 
 #skills-container {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 2rem;
     text-align: center;
     justify-content: center;
@@ -192,6 +193,7 @@ hr {
 
 .skills-box {
     font-size: 5rem;
+    margin-right: .5rem;
 }
 
 @media(max-width: 450px) {
@@ -244,8 +246,12 @@ hr {
 
     .skills-box {
         flex: 1 1 100%;
-        padding: 2rem;
         max-width: 100%;
+        margin: 2rem;
         text-align: center;
      }
+
+     .skills-box i {
+        font-size: 60px;
+      }
 }
